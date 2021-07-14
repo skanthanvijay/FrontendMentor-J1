@@ -167,10 +167,6 @@ input::-webkit-inner-spin-button {
   color: var(--str-cyn);
 }
 
-.output h2 {
-  margin-top: 10px;
-}
-
 .output h3 {
   color: white;
   margin-bottom: 1px;
@@ -202,6 +198,8 @@ input::-webkit-inner-spin-button {
   height: 50px;
   background-color: var(--str-cyn);
   color: var(--dark-cyn);
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .reset-btn:active {
