@@ -1,0 +1,255 @@
+/* VARIABLES */
+:root {
+  --bgc: hsl(185, 41%, 84%);
+  --dark-cyn: hsl(183, 100%, 15%);
+  --str-cyn: hsl(172, 67%, 45%);
+  --dg-cyn1: hsl(186, 14%, 43%);
+  --dg-cyn2: hsl(184, 14%, 56%);
+  --lg-cyn: hsl(189, 41%, 97%);
+}
+
+/* General Elements */
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  background-color: var(--bgc);
+}
+
+button {
+  border-radius: 5px;
+  border-style: hidden;
+  font-family: 'Space Mono', monospace;
+}
+
+input[type="number"] {
+  font-weight: 700;
+  background-color: var(--lg-cyn);
+  font-size: 1rem;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dg-cyn2);
+}
+
+
+/* Logo */
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+
+/* Whole Calculator */
+
+.calculator {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 20%;
+}
+
+.half {
+  display: grid;
+  width: 50%;
+  height: 100%;
+  margin: 15px;
+  padding: 20px;
+}
+
+.section-div {
+  margin: 20px auto;
+}
+
+
+/* INPUT HALF */
+
+.input {
+  color: var(--dg-cyn1);
+}
+
+.input-field {
+  border-style: hidden;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  color: var(--dark-cyn);
+  text-align: right;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 93%;
+  height: 32px;
+  padding-right: 5px;
+}
+
+
+/* Bill */
+
+.bill {
+  background: url("images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+
+
+/* Tip Percentage */
+
+.tip-section {
+  width: 100%;
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.tip-btn {
+  width: 90px;
+  height: 30px;
+}
+
+.fixed-per .tip-btn {
+  background-color: var(--dark-cyn);
+  color: white;
+  font-weight: 700;
+}
+
+.fixed-per .tip-btn:active {
+  background-color: var(--bgc);
+  color: var(--dark-cyn);
+}
+
+
+/* No. Of People */
+
+.people {
+  background: url("images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+
+
+
+/* OUTPUT HALF */
+
+.output {
+  border-radius: 10px;
+  background-color: var(--dark-cyn);
+  overflow: hidden;
+  font-size: 0.85em;
+}
+
+.output-sec {
+  display: flex;
+  padding: 5px 15px;
+}
+
+.subsec {
+  width: 50%;
+}
+
+.output h1 {
+  color: var(--str-cyn);
+}
+
+.output h2 {
+  margin-top: 10px;
+}
+
+.output h3 {
+  color: white;
+  margin-bottom: 1px;
+}
+
+.output p {
+  color: var(--dg-cyn2);
+  margin-top: 1px;
+}
+
+.amt {
+  text-align: right;
+}
+
+.valid {
+  border-style: solid;
+  border-color: green;
+}
+
+.invalid {
+  border-style: solid;
+  border-color: red;
+}
+
+/* Reset Button */
+
+.reset-btn {
+  width: 100%;
+  height: 50px;
+  background-color: var(--str-cyn);
+  color: var(--dark-cyn);
+}
+
+.reset-btn:active {
+  background-color: var(--bgc);
+  color: var(--dg-cyn1);
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1000px) {
+
+  body {
+    margin: 8px 0;
+  }
+
+  .img-container {
+    padding: 10%;
+  }
+
+  .calculator {
+    flex-wrap: wrap;
+    margin: auto 0;
+    border-radius: 20px;
+  }
+
+  .half {
+    width: 100%;
+  }
+
+  .input {
+    margin-bottom: 0;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .tip-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px auto;
+  }
+
+  .tip-btn {
+    width: 100%;
+    height: 40px;
+  }
+
+}
